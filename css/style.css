@@ -9277,16 +9277,32 @@ footer .row.link-footer .column:last-child {
 }
 .blog-article .blog-article-slider {
   margin-top: 45px;
+  margin-bottom: 60px;
 }
 .blog-article .blog-article-slider .slick-list {
   padding-top: 0;
+  padding-bottom: 0;
+}
+.blog-article .blog-article-slider .slick-arrow {
+  width: 130px;
+  border-radius: 4px;
 }
 .blog-article .blog-article-slider .slick-arrow:before {
-  transform: rotate(90deg);
-  margin-top: 3px;
+  transform: rotate(180deg);
+  margin-top: 1px;
+  background-image: url(../img/down-chevron.png);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 30px;
 }
 .blog-article .blog-article-slider .slick-next::before {
-  background-position: -22px -24px;
+  transform: rotate(0deg);
+}
+.blog-article .blog-article-slider .slick-next {
+  bottom: -35px;
+  top: unset;
+  right: 35px;
 }
 .blog-article .blog-article-slider .slick-slide .img div {
   height: 90px;
