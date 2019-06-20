@@ -3794,7 +3794,17 @@ footer{
     padding: 20px 20px 23px 20px;
   }
   .blog-article-slider { 
-  	margin-top: 45px;
+	margin-top: 45px;
+	.slick-list {
+		padding-top: 0;
+	}
+	.slick-arrow:before {
+		transform: rotate(90deg);
+		margin-top: 3px;
+	}
+	.slick-next::before {
+		background-position: -22px -24px;
+	}  
   	.slick-slide {
   		.img {
   			div {

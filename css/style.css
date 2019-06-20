@@ -971,6 +971,10 @@ nav {
 .sidebar > .row {
   margin-top: 1.875rem !important;
 }
+.sidebar > .row.blog-article .title {
+  color: #4a5b70;
+  font-size: 21px;
+}
 .sidebar > .row .title {
   font-size: 0.9375rem;
   font-weight: 700;
@@ -9274,6 +9278,16 @@ footer .row.link-footer .column:last-child {
 .blog-article .blog-article-slider {
   margin-top: 45px;
 }
+.blog-article .blog-article-slider .slick-list {
+  padding-top: 0;
+}
+.blog-article .blog-article-slider .slick-arrow:before {
+  transform: rotate(90deg);
+  margin-top: 3px;
+}
+.blog-article .blog-article-slider .slick-next::before {
+  background-position: -22px -24px;
+}
 .blog-article .blog-article-slider .slick-slide .img div {
   height: 90px;
   position: relative;
@@ -12415,7 +12429,7 @@ footer .row.link-footer .column:last-child {
 
 /* Ion.RangeSlider
 // css version 2.0.3
-// ┬й 2013-2014 Denis Ineshin | IonDen.com
+// © 2013-2014 Denis Ineshin | IonDen.com
 // ===================================================================================================================*/
 /* =====================================================================================================================
 // RangeSlider */
@@ -12591,7 +12605,7 @@ footer .row.link-footer .column:last-child {
 
 /* Ion.RangeSlider, Flat UI Skin
 // css version 2.0.3
-// ┬й Denis Ineshin, 2014    https://github.com/IonDen
+// © Denis Ineshin, 2014    https://github.com/IonDen
 // ===================================================================================================================*/
 /* =====================================================================================================================
 // Skin details */
