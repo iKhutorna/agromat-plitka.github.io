@@ -562,9 +562,10 @@
     }
 
     if ($('.js-blog-article-slider').exists()) {
+      let countSlides = $('.blog-article-slider .column.medium-12').length
       $('.js-blog-article-slider').slick({
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: (countSlides <= 4)? countSlides : 4,
         slidesToScroll: 1,
         draggable: true,
         vertical: true
@@ -1202,14 +1203,17 @@ testTooltip();
 $(window).resize(function () {
     testTooltip();
 });
-tooltip.on('mouseover, click', function (e) {
+
+tooltip.on('mouseover', function (e) {
+  const wrap = $(this).closest(tooltip);
+  if (e.type === "mouseover" && $(window).width() >= 767 && !wrap.hasClass('is-active')) {
+    wrap.addClass('is-active');
+  }
+});
+tooltip.on('click', function(e) {
     const wrap = $(this).closest(tooltip);
-
+     
     if (!e.target.classList.contains('js-preview-tooltip-close') && e.type === "click" && $(window).width() < 767 && !wrap.hasClass('is-active')) {
-      wrap.addClass('is-active');
-    }
-
-    if (e.type === "mouseover" && $(window).width() >= 767 && !wrap.hasClass('is-active')) {
       wrap.addClass('is-active');
     }
 
