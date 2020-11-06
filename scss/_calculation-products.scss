@@ -1,67 +1,18 @@
 .calculation-products-table {
 	font-size: 14px;
-	@include r($mob) {
-		overflow: auto
-	}
-	&__body {
-		margin-bottom: 10px;
-		.preview-tooltip {
-			position: relative;
-			@include r($mob) {
-				position: static;
-			}
-			&.is-active {
-				.preview-tooltip__content {
-					@include r($mob) {
-						left: -15px;
-						right: -15px;
-						width: auto;
-					}
-				}
-			}
-		}
-		table {
-			@include r($mob) {
-				width: 700px;
-			}
-			@include r($mob-sm) {
-				width: 600px;
-			}
-		}
-		td, th {
-			border: 1px solid #888888;
-		}
-		td {
-			text-align: right;
-			&:first-child {
-				text-align: center;
-			}
-			&:nth-child(2) {
-				text-align: left;
-			}
-		}
-		tr {
-			position: relative !important;
-			&:last-child {
-				td {
-					&:last-child {
-						text-align: right;
-					}
-				}
-			}
-		}
-	}
-}
-
-.calculation-products-table {
-
 	.preview-tooltip {
 		position: relative;
 		@include r($mob) {
 			position: static;
 		}
+		&__img {
+			@include r($mob) {
+				width: 120px;
+				height: 120px;
+			}
+		}
 	}
-	&__mybody {
+	&__body {
 		border: 1px solid #888888;
 	}
 	&__row {
