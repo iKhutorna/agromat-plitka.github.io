@@ -3,6 +3,40 @@
 	@include r($mob) {
 		overflow: auto
 	}
+	&.full-mobile-tooltip {
+		.calculation-products-table {
+			&__body {
+				.preview-tooltip.is-active {
+					.preview-tooltip__content {
+						@include r($mob) {
+							position: fixed;
+							top: 0 !important;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							@media (orientation: portrait) {
+								flex-direction: column;
+								justify-content: flex-start;
+								.preview-tooltip {
+									&__img {
+										margin: 0 0 20px;
+										width: 100%;
+										overflow: hidden;
+									}
+								}
+							}
+							@media (orientation: landscape) {
+								.preview-tooltip__inner {
+									justify-content: flex-start;
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
 	&__body {
 		margin-bottom: 10px;
 		.preview-tooltip {

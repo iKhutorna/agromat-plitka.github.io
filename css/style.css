@@ -14298,6 +14298,32 @@ footer ul.contact li .work-schedule__item:not(:last-child), .footer_mobile .work
     overflow: auto;
   }
 }
+@media only screen and (max-width: 767px) {
+  .calculation-products-table.full-mobile-tooltip .calculation-products-table__body .preview-tooltip.is-active .preview-tooltip__content {
+    position: fixed;
+    top: 0 !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .calculation-products-table.full-mobile-tooltip .calculation-products-table__body .preview-tooltip.is-active .preview-tooltip__content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .calculation-products-table.full-mobile-tooltip .calculation-products-table__body .preview-tooltip.is-active .preview-tooltip__content .preview-tooltip__img {
+    margin: 0 0 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .calculation-products-table.full-mobile-tooltip .calculation-products-table__body .preview-tooltip.is-active .preview-tooltip__content .preview-tooltip__inner {
+    justify-content: flex-start;
+  }
+}
+
 .calculation-products-table__body {
   margin-bottom: 10px;
 }
